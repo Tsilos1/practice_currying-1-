@@ -1,14 +1,14 @@
 // Refactor all of the below functions to be curried
 
-const sum = (a, b) => {
+const sum = a => b => {
   return a + b
 }
 
-const mult = (a, b) => {
+const mult = a => b => {
   return a * b
 }
 
-const diff = (a, b) => {
+const diff = a => b => {
   return a - b
 }
 
@@ -19,6 +19,8 @@ const handleMath = (f, a, b) => {
 // Factor curried functions that utilize handleMath and the mathematic functions like so:
 
 const handleAdd = handleMath(sum)
+const handleDifference = handleMath(diff)
+const handleMult = handleMath(mult)
 
 // Refactor the following functions to be curried.
 
